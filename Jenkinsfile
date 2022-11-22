@@ -22,7 +22,7 @@ pipeline {
                 steps {
                     script{
 			    
-			    sudo cp /opt/jenkins/workspace/Test1_Java/target/hello-world-war-1.0.0.war  /opt/tomcat/webapps/
+			    deploy adapters: [tomcat9(credentialsId: 'tomcat_credential', path: '', url: 'http://43.204.36.139:8080/')], contextPath: null, war: '**/*.war'
                     
 		    }
                 }
