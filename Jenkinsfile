@@ -5,7 +5,7 @@ pipeline {
       steps {
         echo "cloning java project from git"
         sh ''' 
-		git pull https://github.com/cpdani14/Test1_Java.git
+		git clone https://github.com/cpdani14/Test1_Java.git
 	   '''
         }
     }
