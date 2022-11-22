@@ -21,8 +21,6 @@ pipeline {
 	stage ('DEPLOY') {
                 steps {
                     script {
-			    pwd
-			    cd /opt/jenkins/workspace/Pipeline_Java_Build_Deploy@2/target
 			   deploy adapters: [tomcat9(credentialsId: 'tomcat_credential', path: '', url: 'http://43.204.36.139:8080/')], contextPath: null, war: '**/*.war'
                         }
                 }
