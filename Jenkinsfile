@@ -25,5 +25,13 @@ pipeline {
 		    }
                 }
  	 }
+	 stage ('TEST') {
+		steps {
+			echo "Testing the build"
+        sh ''' 
+			sleep 5
+	   '''
+      }
+    }
   }
 }  
