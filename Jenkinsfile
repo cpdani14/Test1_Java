@@ -26,8 +26,12 @@ pipeline{
                 }
             }
         stage ('TESTING') {
-			steps {
-			echo "Testing Build"
+		steps {
+		sh '''
+		 cd /opt/jenkins/workspace/Pipeline_Java_Build_Deploy/
+		 mvn test
+			echo "Testest successfully"
+		'''
         	}
 		}
     }
