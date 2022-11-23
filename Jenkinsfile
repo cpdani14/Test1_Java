@@ -5,12 +5,12 @@ pipeline{
     stages{
         stage('CLONING REPO'){
             steps{
-                git 'https://github.com/cpdani14/Test1_Java.git'
+                git clone 'https://github.com/cpdani14/Test1_Java.git'
             }
         }    
             stage('BUILD'){
                 steps{
-                  sh 'mvn clean install'  
+                  sh 'mvn clean package'  
                 }
             }
             stage('DEPLOYING'){
