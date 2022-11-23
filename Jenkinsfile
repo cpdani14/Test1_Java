@@ -5,7 +5,9 @@ pipeline{
     stages{
         stage('CLONING REPO'){
             steps{
+                sh '''
                 git clone 'https://github.com/cpdani14/Test1_Java.git'
+            '''
             }
         }    
             stage('BUILD'){
